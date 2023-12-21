@@ -1,3 +1,6 @@
+Use python to debug locally
+python -m http.server
+
 Thanks for downloading this template!
 
 Template Name: MeFamily
