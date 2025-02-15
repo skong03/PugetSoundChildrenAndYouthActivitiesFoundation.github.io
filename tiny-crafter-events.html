@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body>
+  <script>
+    // Load common elements
+    fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('head').innerHTML = data;
+        });
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+  </script>
+
+  <div id="head"></div>
+  <div id="header"></div>
+
+  <main id="main">
+    <!-- Breadcrumbs section -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Events</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Events</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event List Section -->
+    <section id="event-list" class="event-list">
+      <div class="container">
+        <div class="row" id="events-container">
+          <!-- Events will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    // Function to create event card
+    function createEventCard(event) {
+    // Determine link and text based on available links
+    let linkHtml = '';
+    if (event.photoGalleryLink) {
+      linkHtml = `<a href="${event.photoGalleryLink}" class="btn-learn-more">Photo Gallery</a>`;
+    } else if (event.applyLink) {
+      linkHtml = `<a href="${event.applyLink}" class="btn-learn-more">Apply Now</a>`;
+    }
+
+    return `
+      <div class="col-md-6 d-flex align-items-stretch">
+        <div class="card">
+          <div class="card-img">
+            <img src="${event.image}" alt="Event Image">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">${event.title}</h5>
+            <p class="fst-italic text-center">${event.date}</p>
+            <p class="card-text">${event.description}</p>
+            ${linkHtml}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+    // Load and render events
+    fetch('tiny-crafter-event-data.json')
+      .then(response => response.json())
+      .then(data => {
+        const eventsContainer = document.getElementById('events-container');
+        data.events.forEach(event => {
+          eventsContainer.innerHTML += createEventCard(event);
+        });
+      })
+      .catch(error => console.error('Error loading events:', error));
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
