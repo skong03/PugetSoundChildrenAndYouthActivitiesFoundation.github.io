@@ -1,12 +1,20 @@
 {
     "events": [
+        {
+        "image": "assets/img/bear.jpg",
+        "title": "Tiny Crafters: Fun & Learning for 4-6 Year Olds",
+        "date": "Issaquah, Sunday, Oct 19th, 2025 at 10:30am - 12:00pm",
+        "description": "Crafting Fun for 4-6 Year Olds! Develop skills and social bonds. Pizza for lunch. Limited spots available. Please fill out the form; Admission fee: $25 (voluntary).",
+        "applyLink": "https://docs.google.com/forms/d/e/1FAIpQLScRmWgzPuAFxtOJHv8hwjb4ivb607KMEqZFvUUbYVqbRE1cjA/viewform?usp=header",
+        "photoGalleryLink": ""
+      },
          {
         "image": "assets/img/shark.jpg",
         "title": "Tiny Crafters: Fun & Learning for 4-6 Year Olds",
-        "date": "Issaquah, Sunday, Sep 28st, 2025 at 10:30am - 12:00pm",
+        "date": "Issaquah, Sunday, Oct 12st, 2025 at 10:30am - 12:00pm",
         "description": "Crafting Fun for 4-6 Year Olds! Develop skills and social bonds. Pizza for lunch. Limited spots available. Please fill out the form; Admission fee: $25 (voluntary).",
         "applyLink": "https://docs.google.com/forms/d/e/1FAIpQLSfL2z_t77UjnNDwHhPId0wreoAvCWkqROARb-ioABw-vWJuQw/viewform?usp=header",
-        "photoGalleryLink": ""
+        "photoGalleryLink": "https://drive.google.com/drive/folders/1GlCHBmR7ikQhHKZmUYweP0PqPNhST-9F?usp=drive_link"
       },
         {
         "image": "assets/img/flag.jpg",
