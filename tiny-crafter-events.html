@@ -55,14 +55,23 @@
   <div id="footer"></div>
 
   <script>
+    // Google Form Configuration - ONE FORM FOR ALL EVENTS
+    const GOOGLE_FORM_BASE = 'https://docs.google.com/forms/d/e/1FAIpQLScbiG_CegaRlwJMCjCXdvKy6YiXXHoorUj1GpOCnGAgWnK14Q/viewform';
+    const EVENT_ENTRY_ID = 'entry.1874168488';
+
     // Function to create event card
     function createEventCard(event) {
     // Determine link and text based on available links
     let linkHtml = '';
     if (event.photoGalleryLink) {
       linkHtml = `<a href="${event.photoGalleryLink}" class="btn-learn-more">Photo Gallery</a>`;
+    } else if (event.eventTopic) {
+      // Build pre-filled Google Form URL with event topic
+      const registerUrl = `${GOOGLE_FORM_BASE}?usp=pp_url&${EVENT_ENTRY_ID}=${encodeURIComponent(event.eventTopic)}`;
+      linkHtml = `<a href="${registerUrl}" class="btn-learn-more" target="_blank">Register Now</a>`;
     } else if (event.applyLink) {
-      linkHtml = `<a href="${event.applyLink}" class="btn-learn-more">Apply Now</a>`;
+      // Legacy support for old individual Google Form links
+      linkHtml = `<a href="${event.applyLink}" class="btn-learn-more" target="_blank">Apply Now</a>`;
     }
 
     return `
