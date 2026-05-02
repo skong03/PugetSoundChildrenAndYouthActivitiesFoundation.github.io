@@ -1,6 +1,15 @@
 {
     "events": [
         {
+            "image": "assets/img/house.jpg",
+            "title": "Tiny Crafters & storyTell workshop (Ages 4–6)",
+            "date": "Issaquah, Sunday, May 3rd, 2026 · 10:30am – 12:30pm",
+            "eventTopic": "house",
+            "description": "A fun and enriching Sunday event for children ages 4–6! 10:30–11:30 Tiny Crafters (hands-on art & creativity). 11:30–12:00 Pizza lunch. 12:00–12:30 Little Piano Recital — a gentle and encouraging music sharing time. Limited spots available. Admission: $25 (voluntary).",
+            "applyLink": "",
+            "photoGalleryLink": ""
+        },
+        {
             "image": "assets/img/earth.jpg",
             "title": "Tiny Crafters & storyTell workshop (Ages 4–6)",
             "date": "Issaquah, Sunday, Apr 20th, 2026 · 10:30am – 12:30pm",
