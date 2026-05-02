@@ -7,6 +7,27 @@ Quickly add new Tiny Crafters events to `tiny-crafter-event-data.json` with mini
 
 ## 📝 Simple Commands
 
+### **Skill Trigger (Use This Next Time)**
+
+Say exactly:
+```
+Run Event Skill: add event topic [topic], image [filename], source [Desktop|Downloads], then commit and push
+```
+
+**Example:**
+```
+Run Event Skill: add event topic earth day, image earth.jpg, source Desktop, then commit and push
+```
+
+This single request means Copilot should:
+1. Copy the image from Desktop/Downloads to `assets/img/`
+2. Add a new event at the top of `tiny-crafter-event-data.json`
+3. Use your standard Sunday time template
+4. Verify the image exists
+5. Commit and push to `main`
+
+---
+
 ### **Create New Event**
 
 Just say:
@@ -104,6 +125,12 @@ When you create an event, this JSON structure is added:
 1. Say: `Add event, topic is [next theme]`
 2. Provide image filename when asked
 3. Event is added to JSON with registration open
+
+### **One-Command Publish Workflow:**
+1. Say: `Run Event Skill: add event topic [topic], image [file], source [Desktop|Downloads], then commit and push`
+2. Copilot copies image, adds event JSON, verifies files
+3. Copilot commits and pushes automatically
+4. Site is live after GitHub Pages deploy
 
 ### **After Event:**
 1. Upload photos to Google Drive
