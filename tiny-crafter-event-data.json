@@ -1,6 +1,15 @@
 {
     "events": [
         {
+            "image": "assets/img/kindlewood.jpg",
+            "title": "Tiny Crafters & storyTell workshop (Ages 4–6)",
+            "date": "Issaquah, Sunday, May 24th, 2026 · 10:30am – 12:30pm",
+            "eventTopic": "kindlewood",
+            "description": "A fun and enriching Sunday event for children ages 4–6! 10:30–11:30 Tiny Crafters (hands-on art & creativity). 11:30–12:00 Pizza lunch. 12:00–12:30 Little Piano Recital — a gentle and encouraging music sharing time. Limited spots available. Admission: $25 (voluntary).",
+            "applyLink": "",
+            "photoGalleryLink": ""
+        },
+        {
             "image": "assets/img/fish.jpg",
             "title": "Tiny Crafters & storyTell workshop (Ages 4–6)",
             "date": "Issaquah, Sunday, May 17th, 2026 · 10:30am – 12:30pm",
