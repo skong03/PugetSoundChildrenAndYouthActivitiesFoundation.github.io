@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ee">
+  <meta name="description" content="Join five little sound friends on a 15-page illustrated phonics adventure. Tap words to hear SH, CH, TH, WH, and CK.">
+  <title>The Great Snack Quest · Little Sound Club</title>
+  <link rel="stylesheet" href="assets/css/phonics-book.css">
+  <script src="assets/js/phonics-book.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="phonics-book.html" aria-label="Little Sound Club home"><span class="brand-icon" aria-hidden="true">a<span>✦</span></span><span>little sound club<span class="brand-sub">SMALL SOUNDS, BIG DISCOVERIES</span></span></a>
+    <div class="header-links"><a href="Books.html">← Bookshelf</a><button class="grownup-button" id="grownup-open" type="button">For grown-ups <span aria-hidden="true">↗</span></button></div>
+  </header>
+
+  <main>
+    <section class="book-heading" aria-labelledby="book-title">
+      <div><div class="eyebrow"><span class="tiny-star" aria-hidden="true">✦</span> A READ, LISTEN & SAY ADVENTURE</div><h1 id="book-title">The Great Snack Quest<span class="title-star" aria-hidden="true">✧</span></h1><p>Five little friends. Five new sounds. One very silly picnic.</p></div>
+      <span class="age-label"><span aria-hidden="true">✿</span> Made for little readers <b>Ages 5–7</b></span>
+    </section>
+
+    <nav class="friend-nav" aria-label="Choose a sound friend" id="friend-nav"></nav>
+
+    <section class="reader" aria-label="Picture book">
+      <div class="reader-top"><div class="chapter-label"><span id="chapter-dot"></span><span id="chapter-label"></span></div><span class="tap-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14V5a2 2 0 0 1 4 0v7l1-1a2 2 0 0 1 3 2l-2 6H9l-5-6a2 2 0 0 1 3-2l4 3Z"/></svg> Tap a word to hear it</span></div>
+      <article class="book-page" id="book-page" aria-labelledby="page-title"></article>
+      <div class="reader-bottom"><span id="page-kind"></span><button id="read-page" class="read-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 5-5 4H3v6h3l5 4V5Z"/><path d="M15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></svg><span>Read to me</span></button></div>
+    </section>
+
+    <nav class="page-navigation" aria-label="Book pages"><button id="previous-page" class="page-arrow" type="button" aria-label="Previous page"><span aria-hidden="true">←</span><span>Back</span></button><div class="progress"><span id="page-count" aria-live="polite" aria-atomic="true"></span><div class="page-dots" id="page-dots"></div></div><button id="next-page" class="page-arrow next" type="button"><span id="next-label">Next</span><span aria-hidden="true">→</span></button></nav>
+    <p class="reading-tip"><span aria-hidden="true">♡</span> Little by little, sound by sound. You’re doing great!</p>
+    <p class="audio-status" id="audio-status" role="status" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer"><span>A little adventure from the Puget Sound Children and Youth Activities Foundation</span><span>Made for curious minds <span aria-hidden="true">✦</span></span></footer>
+
+  <dialog id="grownup-dialog" aria-labelledby="grownup-title"><button class="dialog-close" id="grownup-close" type="button" aria-label="Close grown-up guide">×</button><div class="eyebrow">A NOTE FOR YOUR READING BUDDY</div><h2 id="grownup-title">Two letters. One sound.</h2><p>A digraph is two letters working together to make one sound. Read together, tap a word to hear it, then let your child try. Each friend has a meet, story, and practice page.</p><ul><li><b>SH</b>: a long, soft sound, as in <b>ship</b>.</li><li><b>CH</b>: a short train sound, as in <b>chip</b>.</li><li><b>TH</b>: put the tongue gently between the teeth and blow, as in <b>thin</b>. TH can also buzz, as in <b>this</b>; this book practices the quiet sound.</li><li><b>WH</b>: as in <b>whale</b>. Many English speakers say it like W; some use a breathier sound. Both are welcome. We avoid <b>who</b>, which has a different sound.</li><li><b>CK</b>: one quick /k/ sound, as in <b>duck</b>.</li></ul><p>Audio reads whole words using your device’s English voice. It does not model isolated digraph sounds. Voice quality and availability depend on your browser and device.</p><p class="guide-small">Use the arrows, your keyboard’s ← and → keys, or swipe the picture to turn pages. Nothing is recorded or uploaded by this website. Your browser’s voice service may use a network connection.</p></dialog>
+  <noscript><p class="noscript-note">Please enable JavaScript to open the interactive picture book.</p></noscript>
+</body>
+</html>
