@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <meta name="description" content="输入数字，创造可爱的数字积木伙伴。每格大小统一，支持 A4 彩色打印和黑白涂色。">
+  <title>数字积木工坊 · Number Buddies</title>
+  <link rel="stylesheet" href="assets/css/number-blocks.css">
+  <script src="assets/js/number-blocks.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="number-blocks.html"><span class="brand-mark" aria-hidden="true">▦</span><span>数字积木工坊<small>NUMBER BUDDIES</small></span></a>
+    <a class="home-link" href="index.html">返回首页 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow"><span aria-hidden="true">✳</span> LITTLE BLOCKS, BIG IMAGINATION</p>
+      <h1>一个数字，一个<span>小伙伴。</span></h1>
+      <p>把数字变成可爱的积木角色。打印下来，一起数一数、涂一涂！</p>
+    </section>
+    <div class="workshop">
+      <aside class="controls" aria-label="角色设置">
+        <form id="buddy-form" novalidate>
+          <div class="section-heading"><span class="step">01</span><h2>选择一个数字</h2><span class="range-label">1–100</span></div>
+          <label class="sr-only" for="number-input">积木数量，1 至 100 的整数</label>
+          <div class="number-stepper"><button type="button" id="decrease" aria-label="减少一块">−</button><input type="number" id="number-input" min="1" max="100" step="1" value="6" inputmode="numeric" aria-describedby="number-help number-error"><button type="button" id="increase" aria-label="增加一块">+</button></div>
+          <p class="field-help" id="number-help">你选的数字，就是小伙伴的积木数量。</p>
+          <p class="error" id="number-error" role="alert" hidden></p>
+          <div class="presets" aria-label="常用数字">
+            <button type="button" data-number="1">1</button><button type="button" data-number="2">2</button><button type="button" data-number="3">3</button><button type="button" data-number="4">4</button><button type="button" data-number="5">5</button><button type="button" data-number="6">6</button><button type="button" data-number="7">7</button><button type="button" data-number="8">8</button><button type="button" data-number="9">9</button><button type="button" data-number="10">10</button>
+          </div>
+          <div class="control-section"><div class="section-heading"><span class="step">02</span><h2>给它一点个性</h2></div>
+            <fieldset><legend>积木排列</legend><div class="segmented"><label><input type="radio" name="layout" value="compact" checked><span>▦ 方方正正</span></label><label><input type="radio" name="layout" value="tall"><span>▥ 高高站好</span></label></div></fieldset>
+            <div class="columns-control"><label for="columns-input">列数</label><select id="columns-input" name="columns" aria-describedby="columns-help"><option value="auto">自动排列</option><option value="1">1 列</option><option value="2">2 列</option><option value="3">3 列</option><option value="4">4 列</option><option value="5">5 列</option><option value="6">6 列</option><option value="7">7 列</option><option value="8">8 列</option><option value="9">9 列</option><option value="10">10 列</option></select><p class="field-help" id="columns-help" aria-live="polite"></p></div>
+            <div class="columns-control"><label for="copies-input">每页角色数</label><select id="copies-input" name="copies" aria-describedby="copies-help"><option value="1">1 个角色</option><option value="2">2 个角色</option><option value="4">4 个角色</option><option value="6">6 个角色</option><option value="9">9 个角色</option></select><p class="field-help" id="copies-help">在同一张 A4 上重复打印当前角色，空间不足时统一缩小。</p></div>
+            <fieldset><legend>打印风格</legend><div class="style-options"><label><input type="radio" name="style" value="color" checked><span><i class="color-sample" aria-hidden="true"></i><b>彩色伙伴</b><small>带着颜色出发</small></span></label><label><input type="radio" name="style" value="outline"><span><i class="outline-sample" aria-hidden="true"></i><b>涂色伙伴</b><small>我的颜色我来涂</small></span></label></div></fieldset>
+          </div>
+          <button class="generate-button" type="submit">生成我的小伙伴 <span aria-hidden="true">✦</span></button>
+        </form>
+        <div class="print-note"><span aria-hidden="true">▤</span><div><b>同一页，每一格都一样大</b><p>默认边长 60 px ≈ 15.9 mm。多个角色自动排版，缩小后的格子尺寸见预览下方。</p></div></div>
+      </aside>
+      <section class="preview" aria-label="A4 打印预览">
+        <div class="preview-toolbar"><div><span class="status-dot"></span>打印预览 <span class="paper-tag">A4 · 纵向</span></div><button type="button" id="print-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7zM16 11h1"/></svg>打印 / 存为 PDF</button></div>
+        <div class="paper-surround"><div class="paper" id="print-sheet"></div></div>
+        <div class="preview-footer"><span id="buddy-status" role="status" aria-live="polite"></span><span>同页等大 · A4 打印</span></div>
+      </section>
+    </div>
+    <p class="printing-tip">小提示：打印时选择 <b>A4、纵向、缩放 100%</b>，关闭页眉和页脚，就能保留格子的实际大小。</p>
+  </main>
+  <footer class="site-footer"><span>为小小的好奇心而做 <span aria-hidden="true">♡</span></span><span>数一数 · 打印 · 玩起来</span></footer>
+  <noscript><p>请启用 JavaScript 来生成数字积木角色。</p></noscript>
+</body>
+</html>
